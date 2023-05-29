@@ -1,0 +1,277 @@
+.showContent {
+    width: 100%;
+    height: 800px;
+}
+
+.showContent img {
+    width: 100%;
+    height: 100%;
+}
+
+.areaBrowsing {
+    width: 100%;
+}
+
+.areaBrowsing .top {
+    display: flex;
+    align-items: center;
+    height: 160px;
+    width: 100% !important;
+}
+
+.show {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.show .attractions {
+    position: relative;
+    display: flex;
+    margin-bottom: 65px !important;
+    flex-direction: column;
+    align-items: center;
+    width: 22%;
+    transition: all .8s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.show .attractions:hover .introduce {
+    color: red;
+}
+
+.show .attractions:hover {
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, .12);
+    ;
+    transform: scale(1.08);
+}
+
+.show .attractions img {
+    width: 100%;
+    height: 230px;
+    position: relative;
+}
+
+.show .attractions .introduce {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.mystory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.mystory h3 {
+    color: #d02552;
+    font-size: 20px;
+}
+
+.mystory h1 {
+    font-weight: 400;
+    color: #000000;
+}
+
+.showImg {
+    display: flex;
+    justify-content: space-around;
+}
+
+.showImg .attraction {
+    padding: 4px;
+    width: 30%;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all .8s;
+}
+
+.showImg .attraction:hover .title {
+    color: #d02552;
+    font-weight: 900;
+}
+
+.showImg .attraction:hover img {
+    opacity: 1;
+}
+
+.showImg .attraction .title {
+    font-size: 18px;
+    color: #323946;
+    font-weight: 800;
+}
+
+.showImg .attraction .describe {
+    margin-top: 7px;
+    text-indent: 20px;
+}
+
+.showImg .attraction img {
+    height: 300px;
+    width: 100%;
+    opacity: .84;
+    transition: all 1.1s;
+}
+
+video {
+    width: 100%;
+}
+
+.introduceCity {
+    font-weight: 800;
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #8B00FF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+
+.content_bottom {
+    margin-top:40px;
+    width: 100%;
+    height: 350px;
+    margin-bottom: 100px;
+}
+
+.content_bottom ul li {
+    position: relative;
+    float: left;
+    margin-left: 1%;
+    overflow: hidden;
+    width: 24%;
+    height: 350px;
+}
+
+.content_bottom ul li:nth-child(5) {
+    margin-right: 0;
+}
+
+.content_bottom ul li img {
+    height: 100%;
+    width: 100%;
+}
+/* 鼠标经过的遮罩层 */
+
+.content_bottom ul li span {
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.content_bottom ul li span i {
+    display: inline-block;
+    margin-top: 125px;
+    margin-left: -85px;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    line-height: 100px;
+    text-align: center;
+}
+
+.content_bottom ul li span i::after {
+    content: '\e9b6';
+    font-family: 'icomoon';
+    font-size: 14px;
+    color: #fff;
+    font-size: 60px;
+}
+
+.content_bottom ul li:hover span {
+    opacity: 1;
+    transition: all .8s;
+}
+
+.content_bottom ul li:hover span i {
+    transform: translate(150%);
+    transition: all 1.2s ease;
+}
+.yidongnav{
+    display: none;
+    position: fixed;
+    left: 20px;
+    opacity: .7;
+    top: 80px;
+    z-index: 9999;
+    background-color: #eee;
+}
+.yidongnav a{
+    display: block;
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #000000;
+    font-weight: 700;
+
+    background-color: #eee;
+    transition: all .5s ease;
+}
+.yidongnav a:hover{
+    opacity: 1;
+    background-color: #FFA500;
+}
+
+
+
+
+
+@media screen and (max-width:1180px) and (min-width:768px) {
+    .showContent {
+        width: 100%;
+        height: 600px;
+    }
+    .show{
+        flex-wrap: wrap;
+    }
+    .show .attractions{
+        width: 230px;
+    }
+    .showImg .attraction{
+        flex-wrap: wrap;
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .showContent {
+        width: 100%;
+        height: 400px;
+    }
+    .yidongnav{
+        display: block;
+    }
+    .show{
+        flex-wrap: wrap;
+    }
+    .show .attractions{
+        width: 230px;
+    }
+    .showImg{
+        flex-wrap: wrap;
+    }
+    .showImg .attraction{
+        width: 220px;
+    }
+    .content_bottom{
+        display: none;
+    }
+    video{
+        margin-bottom: 35px;
+    }
+}
