@@ -82,6 +82,16 @@ a {
 }
 
 
+.header .login{
+  position: absolute;
+  right: 0;
+  top: 5%;
+  right: 4%;
+  color: #d02552;
+  font-size: 25px;
+}
+
+
 nav {
   position: relative;
   width: 100%;
